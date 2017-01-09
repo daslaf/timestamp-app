@@ -5,11 +5,14 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
-app.get('/', function(req, res) {
+// app.get('/', function(req, res) {
 
-	res.send("Hello world");
-	
-});
+// 	res.send({
+// 		unix: null,
+// 		natural: null
+// 	});
+
+// });
 
 app.get('/:query', function (req, res) {
 
