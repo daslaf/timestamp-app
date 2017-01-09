@@ -3,6 +3,14 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 8080;
+
+app.get('/', function(req, res) {
+
+	res.send("Hello world");
+	
+});
+
 app.get('/:query', function (req, res) {
 
 	// response by default
@@ -34,9 +42,9 @@ app.get('/:query', function (req, res) {
 });
 
 
-app.listen(3000, function () {
+app.listen(port, function () {
 
-  console.log('Timestamp microservice listening on port 3000!');
+  console.log('Timestamp microservice listening on port ' + port );
 
 });
 
